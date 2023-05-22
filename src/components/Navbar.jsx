@@ -1,5 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import minirick from "../assets/minirick.jpg";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const location = useLocation();
@@ -12,7 +13,7 @@ const Navbar = () => {
             <img src={minirick} alt="Rick" />
           </Link>
         </div>
-        <div>searchBar</div>
+        <div><SearchBar/></div>
         <div>
           <Link to="/about">About</Link>
         </div>

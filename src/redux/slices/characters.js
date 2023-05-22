@@ -73,6 +73,6 @@ const searchCharacter = createSlice({
 });
 
 export default {
-  createCharacter: createCharacter.reducer,
-  searchCharacter: searchCharacter.reducer,
+  createCharacter: createCharacter,
+  searchCharacter: searchCharacter,
 };
