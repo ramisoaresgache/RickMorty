@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { formatterCharacter } from "../Utils/formatterChar";
 
 const initialState = {
   loading: false,
@@ -19,17 +20,11 @@ export const allFetch = createAsyncThunk(
            const characters = response.data.results;
             page.push(...characters);
     } 
-    const character = page.map((i) => ({
-        id: i.id,
-        name: i.name,
-        status: i.status,
-        species: i.species,
-        gender: i.gender,
-        image: i.image,
-        episode: i.episode,
-    }));
-    console.log(character);
-    return character;
+    const characters = formatterCharacter(page)
+    return characters;
+    // const charName = `https://rickandmortyapi.com/api/character?name=${name}`
+    // const dataChar = await axios.get(charName)
+    // const data
 }
 );
 
