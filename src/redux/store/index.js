@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import {createCharacter,searchCharacter} from "../slices/characters.js";
+import {createCharacter} from "../slices/characters.js";
+import {searchCharacter} from "../slices/charName.js";
 
 export const store = configureStore({
   reducer: {
-    character: createCharacter.reducer,
-    nameCharacters: searchCharacter.reducer,
+    character: createCharacter,
+    nameCharacters: searchCharacter,
   },
 });
