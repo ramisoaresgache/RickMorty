@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import searchCharacter from "../redux/slices/characters.js";
+import {searchCharacter} from "../redux/slices/charName.js";
+
 const SearchBar = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
@@ -20,6 +21,7 @@ const SearchBar = () => {
     >
       <input
         type="text"
+        value={name}
         placeholder="Search Character..."
         onChange={(e) => handleImputChange(e)}
       />

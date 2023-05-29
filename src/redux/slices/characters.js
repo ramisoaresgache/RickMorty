@@ -25,7 +25,7 @@ export const allFetch = createAsyncThunk(
   }
 );
 
-const createCharacter = createSlice({
+ export const createCharacter = createSlice({
   name: "characters",
   initialState,
   extraReducers: (builder) => {
@@ -45,6 +45,4 @@ const createCharacter = createSlice({
   },
 });
 
-export default {
-  createCharacter: createCharacter.reducer,
-};
+//  export default createCharacter.reducer;

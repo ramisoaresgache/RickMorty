@@ -5,6 +5,6 @@ import {searchCharacter} from "../slices/charName.js";
 export const store = configureStore({
   reducer: {
     character: createCharacter,
-    nameCharacters: searchCharacter,
+    nameCharacters: searchCharacter
   },
 });

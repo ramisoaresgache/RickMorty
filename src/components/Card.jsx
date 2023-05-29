@@ -1,14 +1,18 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { allFetch } from "../redux/slices/characters";
+import { allFetch } from "../redux/slices/characters.js";
+
+
 const Card = () => {
   const dispatch = useDispatch();
-  const { loading, character, error } = useSelector(
+  const {loading, character, error}  = useSelector(
     (state) => state.character
   );
+ 
+
   useEffect(() => {
     dispatch(allFetch());
-  }, []);
+  }, [dispatch]);
   return (
     <div className="card">
       <ul>

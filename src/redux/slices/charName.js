@@ -14,7 +14,7 @@ export const charName = createAsyncThunk("namecharacter", async (name) => {
   return finalName;
 });
 
-const searchCharacter = createSlice({
+ export const searchCharacter = createSlice({
   name: "nameCharacters",
   initialState,
   extraReducers: (builder) => {
@@ -34,4 +34,4 @@ const searchCharacter = createSlice({
   },
 });
 
-export default { nameCharacter: searchCharacter.reducer };
+// export default searchCharacter.reducer; 
