@@ -1,10 +1,11 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import {searchCharacter} from "../redux/slices/charName.js";
+import searchCharacter from "../redux/slices/charName";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
+  console.log(name);
 
   const handleImputChange = (e) => {
     e.preventDefault();

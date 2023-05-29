@@ -10,11 +10,12 @@ const initialState = {
 export const charName = createAsyncThunk("namecharacter", async (name) => {
   const charName = `https://rickandmortyapi.com/api/character?name=${name}`;
   const dataChar = await axios.get(charName);
-  const finalName = dataChar.filter((c) => c.name === name);
+  const finalName = dataChar.data.results.filter((c) => c.name === name);
+  console.log(finalName);
   return finalName;
 });
 
- export const searchCharacter = createSlice({
+export const searchCharacter = createSlice({
   name: "nameCharacters",
   initialState,
   extraReducers: (builder) => {
@@ -34,4 +35,4 @@ export const charName = createAsyncThunk("namecharacter", async (name) => {
   },
 });
 
-// export default searchCharacter.reducer; 
+export default searchCharacter.reducer;

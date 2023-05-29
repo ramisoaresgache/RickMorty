@@ -45,4 +45,4 @@ export const allFetch = createAsyncThunk(
   },
 });
 
-//  export default createCharacter.reducer;
+ export default createCharacter.reducer;
