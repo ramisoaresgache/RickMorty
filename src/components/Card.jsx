@@ -8,7 +8,6 @@ const Card = () => {
   const {loading, character, error}  = useSelector(
     (state) => state.character
     );
-    console.log(character)
  
 
   useEffect(() => {
